@@ -1,9 +1,14 @@
 <div>
   <form enctype="multipart/form-data"
   data-dojo-attach-point="fileForm">
+  <div>
     <input name="file" type="file" data-dojo-attach-point="fileNode" />
-    <img data-dojo-attach-point="blah" src="#" alt="your image" />
-    <input name="submit" type="submit" data-dojo-attach-point="uploadLabel" />
+  </div>
+  <div data-dojo-attach-point="eventLog">
+      <textarea readonly data-dojo-attach-point="eventLogContents" style="width: 100%;"></textarea>
+  </div>
+    <button name="submit" type="submit" disabled="disabled" data-dojo-attach-point="uploadLabel">${nls.send}</button>
+    <button name="remove" type="button" data-dojo-attach-point="removeLabel">${nls.remove}</button>
   </form>
 </div>
 
